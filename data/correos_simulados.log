@@ -1,0 +1,15 @@
+
+Fecha: 2024-10-24 11:00:23
+Para:  ejemplo@gmail.com
+Asunto: Verificacion de cuenta
+Mensaje:
+Por favor, verifica tu cuenta haciendo clic en este enlace: http://localhost/login-verificado/verificar.php?token=59e1c9287e5ed7ad1e06e09ab100ae6fcf176a8b98827556fcfdd4dbdfbd5068
+___________________________
+
+Fecha: 2024-10-24 11:00:43
+Para:  ejemplo@gmail.com
+Asunto: Recuperacion de contraseña
+Mensaje:
+Para restablecer tu contraseña, haz click en este enlace: http://localhost/login-verificado/restablecer.php?token=ed2f899a8a93b88b341e29a56fc6a43789d73335d7ace92bc44dff560a9b1f01
+___________________________
+
