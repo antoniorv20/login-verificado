@@ -6,12 +6,12 @@ include_once '../data/usuariobd.php';
 
 $usuariobd = new UsuarioBD();
 
-function redirigirConMnensaje($url, $success, $mensaje){
+function redirigirConMensaje($url, $success, $mensaje){
     //almacena el resultado en la sesion
     $_SESSION['success'] = $success;
     $_SESSION['message'] = $mensaje;
 
-    //realiza la redireccion
+    //realiza la redirección
     header("Location: $url");
     exit();
 }
@@ -23,27 +23,26 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['registro'])){
 
     $resultado = $usuariobd->registrarUsuario($email, $password);
 
-    redirigirConMnensaje('../index.php', $resultado['success'], $resultado['message']);
+    redirigirConMensaje('../index.php', $resultado['success'], $resultado['message']);
 }
 
-//inicio sesion
-if($_SERVER['REQUEST_METHOD']== "POST" && isset($_POST['login'])){
+//Inicio de sesión
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $resultado = $usuariobd-> inicioSesion($email, $password);
+    $resultado = $usuariobd->inicioSesion($email, $password);
 
     if($resultado['success'] == "success"){
         $_SESSION['user_id'] = $resultado['id'];
     }
-
-    redirigirConMnensaje('../index.php', $resultado['success'], $resultado['message']);
+    redirigirConMensaje('../index.php', $resultado['success'], $resultado['message']);
 }
 
-//recuperar contraseña
+//Recuperación de contraseña
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['recuperar'])){
     $email = $_POST['email'];
 
     $resultado = $usuariobd->recuperarPassword($email);
-    redirigirConMnensaje('../index.php', $resultado['success'], $resultado['message']);
+    redirigirConMensaje('../index.php', $resultado['success'], $resultado['message']);
 }

@@ -1,9 +1,9 @@
 document.querySelector('form').onsubmit = function(e) {
     const password = document.querySelector('input[name="nueva_password"]').value;
-    const confirmar = document.querySelector('input[name="confirmar_contrasenia"]').value;
+    const confirm = document.querySelector('input[name="confirmar_password"]').value;
 
-    if(password !== confirmar){
+    if(password !== confirm){
         alert('Las contraseñas no coinciden');
-    e.preventDefault();
-}
+        e.preventDefault();
+    }
 }

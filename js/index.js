@@ -1,12 +1,12 @@
-//obtener los modales
+//obtener las modales
 const modalRegistro = document.getElementById('miModalRegistro');
 const modalRecuperar = document.getElementById('miModalRecuperar');
 
-//obtener el boton que abre el modal 
+//obtener el botón que abre la modal
 const btnRegistro = document.querySelector('.abrir-modal-registro');
 const btnRecuperar = document.querySelector('.abrir-modal-recuperar');
 
-//obteenr el elemento <span> que cierra el modal
+//obtener el elemento <span> que cierra la modal
 const spanRegistro = document.querySelector('.cerrarRegistro');
 const spanRecuperar = document.querySelector('.cerrarRecuperar');
 
@@ -20,22 +20,23 @@ btnRecuperar.onclick = function(){
     modalRecuperar.style.display = "flex";
 }
 
-//cerrar modal cuando se hace click en <span> x
+//cerrar modales cuando se hace click en <span> x
 spanRegistro.onclick = function(){
     modalRegistro.style.display = "none";
 }
-
 spanRecuperar.onclick = function(){
     modalRecuperar.style.display = "none";
 }
 
-//cerrar el modal cuando el usuario hace click fuera del modal 
+//cerrar modal cuando el usuario hace click fuera de la modal
 window.onclick = function(event){
     if(event.target == modalRegistro){
         modalRegistro.style.display = "none";
     }
-
     if(event.target == modalRecuperar){
         modalRecuperar.style.display = "none";
     }
 }
+
+
+

@@ -1,6 +1,11 @@
 <?php
+//credenciales para conectarnos a la bbdd
+define('DB_HOST', '');
+define('DB_USER', '');
+define('DB_PASS', '');
+define('DB_NAME', '');
 
-// define('DB_HOST', value: '');
-// define('DB_USER', value: '');
-// define('DB_PASS', value: '');
-// define('DB_NAME', value: '');
+//credenciales para el envío de correos
+define('MAIL_HOST', '');
+define('MAIL_USER', '');
+define('MAIL_PASS', '');
